@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="AnchorPane" prefHeight="496.0" prefWidth="308.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="logic.WeatherXController">
+   <children>
+      <Label layoutX="66.0" layoutY="14.0" text="WeatherX" textFill="WHITE">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="icon" fitHeight="82.0" fitWidth="85.0" layoutX="81.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="91.0" layoutY="351.0" text="Humidity" textFill="WHITE" />
+      <Label layoutX="93.0" layoutY="439.0" text="Sunset" textFill="WHITE" />
+      <Label layoutX="91.0" layoutY="395.0" text="Sunrise" textFill="WHITE" />
+      <JFXButton fx:id="refreshBtn" layoutX="240.0" layoutY="467.0" onAction="#refreshContent" text="Refresh" textFill="WHITE" />
+      <Text fx:id="temperature" fill="WHITE" layoutX="176.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="99.99999944865704">
+         <font>
+            <Font name="Microsoft JhengHei UI" size="60.0" />
+         </font></Text>
+      <Text fx:id="humidity" fill="WHITE" layoutX="219.0" layoutY="367.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N/A" wrappingWidth="41.030273739248514" />
+      <Text fx:id="sunset" fill="WHITE" layoutX="213.0" layoutY="455.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N/A" />
+      <Text fx:id="sunrise" fill="WHITE" layoutX="213.0" layoutY="411.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N/A" />
+      <Text fx:id="locationTxt" fill="WHITE" layoutX="138.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location">
+         <font>
+            <Font size="20.0" />
+         </font></Text>
+      <JFXButton layoutX="14.0" layoutY="471.0" onAction="#backToSearchScreen" text="Back" textFill="WHITE" />
+      <ImageView fitHeight="30.0" fitWidth="29.0" layoutX="92.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../WeatherIcons/pin.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="description" fill="WHITE" layoutX="124.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fx:id="minMaxTemps" fill="WHITE" layoutX="131.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="temps" />
+      <Line endX="100.0" layoutX="154.0" layoutY="295.0" startX="-100.0" stroke="WHITE" strokeWidth="2.0" />
+      <Label layoutX="128.0" layoutY="306.0" text="Details" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="30.0" fitWidth="29.0" layoutX="52.0" layoutY="347.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../WeatherIcons/humidity.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="29.0" fitWidth="29.0" layoutX="52.0" layoutY="391.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../WeatherIcons/sunrise.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="29.0" fitWidth="29.0" layoutX="52.0" layoutY="435.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../WeatherIcons/sunset.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

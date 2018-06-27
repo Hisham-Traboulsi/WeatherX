@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="AnchorPane" prefHeight="496.0" prefWidth="308.0" stylesheets="@../styling/style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="logic.SearchController">
+   <children>
+      <JFXTextField fx:id="searchBox" focusColor="WHITE" layoutX="61.0" layoutY="199.0" style="-fx-text-fill: white;" unFocusColor="WHITE" />
+      <Label layoutX="67.0" layoutY="24.0" text="WeatherX" textFill="WHITE">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="searchBtn" layoutX="122.0" layoutY="283.0" onAction="#displayWeather" text="Search" textFill="WHITE" />
+      <Text fx:id="errorMessage" fill="RED" layoutX="87.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+   </children>
+</AnchorPane>
